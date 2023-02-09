@@ -42,11 +42,10 @@ const Table = (props) => {
     //     ? 255
     //     : calcVal * exp(arr.length - arr.indexOf(amount)); // 0 -> 255
 
-    if (arr.indexOf(amount) === 0) {
+    if (amount === arr[0]) {
       calcColorGreen = 255;
       calcColorRed = 0;
-      console.log("inside");
-    } else if (arr.indexOf(amount) === arr.length - 1) {
+    } else if (amount === arr[arr.length - 1]) {
       calcColorGreen = 0;
       calcColorRed = 255;
     }
